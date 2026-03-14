@@ -1,8 +1,4 @@
-﻿
-using design_patterns_examples.Builder;
-using design_patterns_examples.Factory;
-using design_patterns_examples.Prototype;
-using design_patterns_examples.Singelton;
+﻿using design_patterns_examples.Factory;
 
 void WriteColoredLine(
    string text, ConsoleColor color = ConsoleColor.Green)
