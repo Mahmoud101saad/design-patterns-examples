@@ -1,5 +1,5 @@
 ﻿using design_patterns_examples.Factory;
-//asd
+
 void WriteColoredLine(
    string text, ConsoleColor color = ConsoleColor.Green)
 {
