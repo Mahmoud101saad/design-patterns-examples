@@ -93,9 +93,11 @@ bankCode = cardNumber.Substring(0, 6);
 
 //2- create bank object based on bank code
 IBank bank = bankFactory.createBanck(bankCode);
-
-
 WriteColoredLine(bank.withdraw());
+//3- create payment card object based on card number
+IpaymentCard paymentCard = bankFactory.GetpaymentCard("22");
+WriteColoredLine(paymentCard.GetName());
+WriteColoredLine(paymentCard.GetProviderInfo());
 
 
 

@@ -18,6 +18,18 @@ namespace design_patterns_examples.Factory
 					return null;
 			}
 		}
-	
+
+		public IpaymentCard GetpaymentCard(string cardNumber)
+		{
+			switch (cardNumber)
+			{
+				case "11":
+					return new VisaCard();
+				case "22":
+					return new MasterCard();
+				default:
+					return null;
+			}
+		}
 	}
 }

@@ -7,5 +7,6 @@ namespace design_patterns_examples.Factory
 	public interface IBankFactory
 	{
 		IBank createBanck(string banckCode);
+		IpaymentCard GetpaymentCard(string cardNumber);
 	}
 }
