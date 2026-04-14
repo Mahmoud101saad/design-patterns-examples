@@ -1,4 +1,5 @@
 ﻿using design_patterns_examples.Factory;
+using design_patterns_examples.StructuralPatterns.ProxyPattern;
 
 void WriteColoredLine(
    string text, ConsoleColor color = ConsoleColor.Green)
@@ -81,25 +82,31 @@ void WriteColoredLine(
 #endregion
 
 #region factory pattern
-string cardNumber, bankCode;
+//string cardNumber, bankCode;
 
-//1-create factory =
-BankFactory bankFactory = new BankFactory();
+////1-create factory =
+//BankFactory bankFactory = new BankFactory();
 
-WriteColoredLine("Enter card number:");
+//WriteColoredLine("Enter card number:");
 
-cardNumber = Console.ReadLine();
-bankCode = cardNumber.Substring(0, 6);
+//cardNumber = Console.ReadLine();
+//bankCode = cardNumber.Substring(0, 6);
 
-//2- create bank object based on bank code
-IBank bank = bankFactory.createBanck(bankCode);
-WriteColoredLine(bank.withdraw());
-//3- create payment card object based on card number
-IpaymentCard paymentCard = bankFactory.GetpaymentCard("22");
-WriteColoredLine(paymentCard.GetName());
-WriteColoredLine(paymentCard.GetProviderInfo());
+////2- create bank object based on bank code
+//IBank bank = bankFactory.createBanck(bankCode);
+//WriteColoredLine(bank.withdraw());
+////3- create payment card object based on card number
+//IpaymentCard paymentCard = bankFactory.GetpaymentCard("22");
+//WriteColoredLine(paymentCard.GetName());
+//WriteColoredLine(paymentCard.GetProviderInfo());
 
+#endregion
 
-
+#region proxy pattern
+SMSserviceProxy smsProxy = new SMSserviceProxy();
+WriteColoredLine(smsProxy.SendSMS("123","010100101","asd"));
+WriteColoredLine(smsProxy.SendSMS("123","010100101","asd"));
+WriteColoredLine(smsProxy.SendSMS("123","010100101","asd"));
+WriteColoredLine(smsProxy.SendSMS("123","010100101","asd"));
 #endregion
 Console.ReadKey();
